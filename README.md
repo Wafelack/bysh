@@ -31,3 +31,25 @@ $ wmanager build
 $ wmanager run
 Hello World
 ```
+
+### Features
+
+#### To reinitialize a project
+
+```
+$ wmanager reinit
+Really want to reinit ? Y/N : Y
+Project renitialized !
+```
+
+#### To create a header file
+
+```
+$ wmanager header foo
+$ cat foo.h
+#ifndef _FOO_H_
+#define _FOO_H_
+
+
+#endif /*_FOO_H*/
+```

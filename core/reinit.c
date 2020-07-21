@@ -10,9 +10,9 @@ void reinit(void)
 {
     if (exists("lock.wmg") == 0)
         return;
-    system("del src\\*");
+    system("del /f /q src\\* ");
     RemoveDirectoryA("src");
-    system("del build\\*");
+    system("del /f /q  build\\*");
     system("del lock.wmg");
     RemoveDirectoryA("build");
 
