@@ -28,7 +28,6 @@ void header(char *name)
     FILE *fic = fopen(wext, "w+");
     if (fic == NULL)
     {
-        printf("Problem");
         return;
     }
     fputs(ifn, fic);
