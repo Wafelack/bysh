@@ -1,10 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-#define VERSION "Alpha-0.1.0"
+#include "../core/version.h"
+#include "../core/infos.h"
 
 int main(int argc, char **argv)
 {
     if (argc < 2)
-        printf("Wafelack | wmanager - version %s\n\nGitHub : https://github.com/Wafelack/wmanager\n%s", VERSION, argv[0]);
+    {
+        fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m <parameters>\033[1;37m");
+        return (EXIT_FAILURE);
+    }
+    if (strcmp(argv[1], "--version") == 0)
+        version();
+
+    return EXIT_SUCCESS;
 }
