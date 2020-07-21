@@ -29,7 +29,7 @@ void create(char *name)
         return;
     }
     fputs("#include <stdio.h>\n\n", fic);
-    fputs("int fic(void) {\n", fic);
+    fputs("int main(void) {\n", fic);
     fputs("    printf(\"Hello World\");\n", fic);
     fputs("    return 0;\n", fic);
     fputs("}\n", fic);
