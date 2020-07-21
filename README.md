@@ -19,7 +19,7 @@ $ wmanager new <project_name>
 $ cd project_name/
 ```
 
-You'll create two folders, `src/` and `build/`
+Two folders have been created, `src/` and `build/`
 
 In `src/`, you'll find file `main.c` that contains a basic hello world program.
 
