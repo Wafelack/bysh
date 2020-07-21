@@ -27,11 +27,7 @@ In `src/`, you'll find file `main.c` that contains a basic hello world program.
 
 ```
 $ wmanager build
-```
 
-<span style="color:green">Project built succesfully !</span>
-
-```
 $ wmanager run
 Hello World
 ```

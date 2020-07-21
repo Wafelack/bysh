@@ -14,13 +14,13 @@ void create(char *name)
 
     char *file = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 11));
     sprintf(file, "%s/src/main.c", name);
-    printf("%s\n", file);
+
+    char *locker = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 9));
+    sprintf(locker, "%s/lock.wmg", name);
 
     CreateDirectoryA(name, NULL);
     CreateDirectoryA(src, NULL);
     CreateDirectoryA(build, NULL);
-
-    printf("String envoyee a fic :\t%s\n", file);
 
     FILE *fic = fopen(file, "w+");
     if (fic == NULL)
@@ -35,5 +35,19 @@ void create(char *name)
     fputs("}\n", fic);
     fclose(fic);
 
-    printf("\033[0;32mSuccesfuly\033[1;37m\033[0m initialized project\033[1m %s\033[0m in\033[0;31m %s/\033[1;37m", name, name);
+    FILE *lock = fopen(locker, "w+");
+    if (lock == NULL)
+    {
+        fprintf(stderr, "Erreur:\tle fichier ne s'est pas ouvert correctement\n");
+        return;
+    }
+    fputs("DONT DELETE IMPORTANT FILE", lock);
+    fclose(lock);
+
+    free(src);
+    free(build);
+    free(file);
+    free(locker);
+
+    printf("\033[0;32m Succesfuly\033[1;37m\033[0m initialized project\033[1m %s\033[0m in\033[0;31m %s/\033[1;37m", name, name);
 }

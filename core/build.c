@@ -11,5 +11,4 @@ void buildhard(void)
 void build(void)
 {
     system("gcc src/*.c -o build/main");
-    fprintf(stderr, "\033[0;32mProject built successfully !\033[1;37m\n");
 }
