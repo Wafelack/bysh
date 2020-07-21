@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     }
     if (strcmp(argv[1], "new") == 0 && argc == 3)
     {
-        create(argv[2]); //create a new empty project
+        create(argv[2]); //initialize a new empty project
         return EXIT_SUCCESS;
     }
 
