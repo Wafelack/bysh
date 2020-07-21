@@ -8,7 +8,7 @@ Project manager for the C programming language
 
 ### Setup
 
-First download the latest version of wmanager, put it in `C:\Program Files` and add `C:\Program Files\` to Path.
+First download the latest release of wmanager, put it in `C:\Program Files` and add `C:\Program Files\` to Path.
 
 Open the command prompt and run :
 

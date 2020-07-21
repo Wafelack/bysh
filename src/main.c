@@ -57,6 +57,7 @@ int main(int argc, char **argv)
             if (strcmp(argv[2], "--force") == 0)
             {
                 reinit();
+                printf("\033[0;31mProject reinitialized !\033[1;37m\n");
                 return EXIT_SUCCESS;
             }
         }
