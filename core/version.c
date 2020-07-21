@@ -2,7 +2,7 @@
 
 #include "version.h"
 
-#define VERSION "1.4.8"
+#define VERSION "1.6.2"
 
 void version(void)
 {
