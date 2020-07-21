@@ -5,6 +5,7 @@
 #include "../core/version.h"
 #include "../core/new.h"
 #include "../core/build.h"
+#include "../core/run.h"
 
 #include "../core/infos.h"
 
@@ -35,6 +36,11 @@ int main(int argc, char **argv)
         {
             build();
         }
+        return EXIT_SUCCESS;
+    }
+    if (strcmp(argv[1], "run") == 0)
+    {
+        run();
         return EXIT_SUCCESS;
     }
 

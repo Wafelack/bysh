@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -W -Wall -Werror -Wextra
-OBJ = build/main.o build/version.o build/new.o build/build.o
+OBJ = build/main.o build/version.o build/new.o build/build.o build/run.o
 
 build : $(OBJ)
 	gcc $(OBJ) -o wmanager
@@ -16,3 +16,6 @@ build/new.o : core/new.c
 
 build/build.o : core/build.c
 	$(CC) -o build/build.o -c core/build.c $(CFLAGS)
+
+build/run.o : core/run.c
+	$(CC) -o build/run.o -c core/run.c $(CFLAGS)
