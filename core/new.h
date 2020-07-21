@@ -3,4 +3,4 @@
 
 void create(char *name);
 
-#endif /*_NEW_H_*/
+#endif

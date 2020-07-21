@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
     if (argc < 2)
     {
-        fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m <parameters>\033[1;37m");
+        fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m [OPTIONS]\033[1;37m");
         return (EXIT_FAILURE);
     }
     if (strcmp(argv[1], "--version") == 0)
@@ -21,10 +21,10 @@ int main(int argc, char **argv)
     }
     if (strcmp(argv[1], "new") == 0 && argc == 3)
     {
-        create (argv[2]);
+        create(argv[2]);
         return EXIT_SUCCESS;
     }
 
-    fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m <parameters>\033[1;37m");
+    fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m [OPTIONS]\033[1;37m");
     return (EXIT_FAILURE);
 }
