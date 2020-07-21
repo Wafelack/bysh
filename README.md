@@ -6,4 +6,32 @@ Project manager for the C programming language
 
 ## How to use
 
-Coming soon !
+### Setup
+
+First download the latest version of wmanager, put it in `C:\Program Files` and add `C:\Program Files\` to Path.
+
+Open the command prompt and run :
+
+### Create a new project
+
+```
+$ wmanager new <project_name>
+$ cd project_name/
+```
+
+You'll find two folders, `src/` and `build/`
+
+In `src/`, you'll find file `main.c` that contains a basic hello world program.
+
+### Compile and Run
+
+```
+$ wmanager build
+```
+
+<span style="color:green">Project built succesfully !</span>
+
+```
+$ wmanager run
+Hello World
+```
