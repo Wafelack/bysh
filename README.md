@@ -2,20 +2,20 @@
 
 Project manager for the C programming language
 
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wmanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wmanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wmanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wmanager?label=Stars&style=plastic) ![GitHub](https://img.shields.io/github/license/Wafelack/wmanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Working_for_Windows_only-%2300ff00) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wmanager?label=Latest%20release)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wanager?label=Stars&style=plastic) ![GitHub](https://img.shields.io/github/license/Wafelack/wanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Working_for_Windows_only-%2300ff00) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wanager?label=Latest%20release)
 
 ## How to use
 
 ### Setup
 
-First download the latest release of wmanager, put it in `C:\Program Files` and add `C:\Program Files\` to Path.
+First download the latest release of wanager, put it in `C:\Program Files` and add `C:\Program Files\` to Path.
 
 ### Create a new project
 
 Open the command prompt and run :
 
 ```
-$ wmanager new <project_name>
+$ wanager new <project_name>
 $ cd project_name/
 ```
 
@@ -26,9 +26,9 @@ In `src/`, you'll find file `main.c` that contains a basic hello world program.
 ### Compile and Run
 
 ```
-$ wmanager build
+$ wanager build
 
-$ wmanager run
+$ wanager run
 Hello World
 ```
 
@@ -37,7 +37,7 @@ Hello World
 #### To reinitialize a project
 
 ```
-$ wmanager reinit
+$ wanager reinit
 Really want to reinit ? Y/N : Y
 Project renitialized !
 ```
@@ -45,7 +45,7 @@ Project renitialized !
 #### To create a header file
 
 ```
-$ wmanager header foo
+$ wanager header foo
 $ cat foo.h
 #ifndef _FOO_H_
 #define _FOO_H_
