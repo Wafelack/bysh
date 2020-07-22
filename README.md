@@ -2,7 +2,7 @@
 
 Project manager for the C programming language
 
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wanager?label=Stars) ![GitHub](https://img.shields.io/github/license/Wafelack/wanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Working_for_Windows_only-%2300ff00) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wanager?label=Latest%20release)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wanager?label=Stars) ![GitHub](https://img.shields.io/github/license/Wafelack/wanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Working_for_Windows_only-%2300ff00) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wanager?label=Latest%20release) [![BCH compliance](https://bettercodehub.com/edge/badge/Wafelack/Wanager?branch=master)](https://bettercodehub.com/)
 
 ## How to use
 
