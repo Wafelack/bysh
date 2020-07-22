@@ -1,4 +1,4 @@
-# wManager
+# Wanager
 
 Project manager for the C programming language
 
