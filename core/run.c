@@ -20,10 +20,12 @@ void run(void)
     if (exists("target/debug/debug.exe"))
     {
         system("target\\debug\\debug.exe");
+        system("del target\\debug\\debug.exe")
     }
     else if (exists("target/release/release.exe"))
     {
         system("target\\release\\release.exe");
+        system("del target\\release\\release.exe")
     }
     else
     {

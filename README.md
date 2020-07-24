@@ -32,6 +32,8 @@ $ wanager run
 Hello World
 ```
 
+NOTE : `wanager build` will build a debug executable, with flags -W -Wall -Werror -Wextra. To disable this build in release mode with : `wanager build --release`
+
 ### Features
 
 #### To reinitialize a project
