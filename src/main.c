@@ -51,7 +51,7 @@ int main(int argc, char **argv)
     }
     if (strcmp(argv[1], "reinit") == 0)
     {
-        if (!exists("lock.wmg")
+        if (!exists("lock.wmg"))
             return EXIT_FAILURE;
         if (argc == 3)
         {
