@@ -12,12 +12,15 @@ void reinit(void)
         return;
     system("del /f /q src\\* ");
     RemoveDirectoryA("src");
-    system("del /f /q  build\\*");
+    system("del /f /q  target\\*");
+
     system("del lock.wmg");
-    RemoveDirectoryA("build");
+    RemoveDirectoryA("target");
 
     CreateDirectoryA("src", NULL);
-    CreateDirectoryA("build", NULL);
+    CreateDirectoryA("target", NULL);
+    CreateDirectoryA("target\\debug", NULL);
+    CreateDirectoryA("target\\release", NULL);
 
     FILE *fic = fopen("src\\main.c", "w+");
     fputs("#include <stdio.h>\n\n", fic);

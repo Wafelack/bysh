@@ -5,10 +5,9 @@
 
 void buildhard(void)
 {
-    system("gcc src/*.c -o build/main -W -Wall -Werror -Wextra");
-    fprintf(stderr, "\033[0;32mProject built successfully !\033[1;37m\n");
+    system("gcc src/*.c -o target/debug/debug.exe -W -Wall -Werror -Wextra");
 }
 void build(void)
 {
-    system("gcc src/*.c -o build/main");
+    system("gcc src/*.c -o target/release/release.exe");
 }

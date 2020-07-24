@@ -4,28 +4,28 @@
 #include <Windows.h>
 #include "new.h"
 
+char *customPath(char *base, const char *adding);
+
 void create(char *name)
 {
-    char *src = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 4));
-    sprintf(src, "%s/src", name);
-
-    char *build = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 5));
-    sprintf(build, "%s/build", name);
-
-    char *file = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 11));
-    sprintf(file, "%s/src/main.c", name);
-
-    char *locker = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 9));
-    sprintf(locker, "%s/lock.wmg", name);
-
     CreateDirectoryA(name, NULL);
+
+    char *src = customPath(name,"/src");
+    char *build = customPath(name,"/target");
+    char *debug = customPath(name, "/target/debug");
+    char *release = customPath(name, "/target/release");
+    char *file = customPath(name, "/src/main.c");
+    char *locker = customPath(name, "/lock.wmg");
+
     CreateDirectoryA(src, NULL);
     CreateDirectoryA(build, NULL);
+
+    CreateDirectoryA(debug, NULL);
+    CreateDirectoryA(release, NULL);
 
     FILE *fic = fopen(file, "w+");
     if (fic == NULL)
     {
-        fprintf(stderr, "Erreur:\tle fichier ne s'est pas ouvert correctement\n");
         return;
     }
     fputs("#include <stdio.h>\n\n", fic);
@@ -48,6 +48,14 @@ void create(char *name)
     free(build);
     free(file);
     free(locker);
+    free(debug);
+    free(release);
 
     printf("\033[0;32m Succesfuly\033[1;37m\033[0m initialized project\033[1m %s\033[0m in\033[0;31m %s/\033[1;37m", name, name);
+}
+char *customPath(char *base, const char *adding)
+{
+    char *output = malloc(strlen(base) + strlen(adding));
+    sprintf(output, "%s%s", base, adding);
+    return output;
 }

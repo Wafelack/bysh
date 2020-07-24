@@ -33,13 +33,13 @@ int main(int argc, char **argv)
     }
     if (strcmp(argv[1], "build") == 0)
     {
-        if (argc == 3 && strcmp(argv[2], "--hard") == 0)
+        if (argc == 3 && strcmp(argv[2], "--release") == 0)
         {
-            buildhard(); //mode with flags
+            build(); 
         }
         else
         {
-            build();
+            buildhard(); //mode with flags
         }
         return EXIT_SUCCESS;
     }
