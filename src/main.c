@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 #include <ctype.h>
 
 #include "../core/version.h"
@@ -12,7 +13,7 @@
 
 #include "../core/infos.h"
 
-static int exists(const char *fname);
+static bool exists(const char *fname);
 
 int main(int argc, char **argv)
 {
@@ -50,7 +51,7 @@ int main(int argc, char **argv)
     }
     if (strcmp(argv[1], "reinit") == 0)
     {
-        if (exists("lock.wmg") == 0)
+        if (!exists("lock.wmg"))
             return EXIT_FAILURE;
         if (argc == 3)
         {
@@ -82,13 +83,13 @@ int main(int argc, char **argv)
     fprintf(stderr, "Usage :\033[0;31m wmanager\033[0;36m <command>\033[1;33m [OPTIONS]\033[1;37m");
     return (EXIT_FAILURE);
 }
-static int exists(const char *fname)
+static bool exists(const char *fname)
 {
     FILE *file;
     if ((file = fopen(fname, "r")))
     {
         fclose(file);
-        return 1;
+        return true;
     }
-    return 0;
+    return false;
 }

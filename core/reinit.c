@@ -1,14 +1,15 @@
 #include <stdio.h>
 #include <Windows.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
 #include "reinit.h"
 
-static int exists(const char *fname);
+static bool exists(const char *fname);
 
 void reinit(void)
 {
-    if (exists("lock.wmg") == 0)
+    if (!exists("lock.wmg"))
         return;
     system("del /f /q src\\* ");
     RemoveDirectoryA("src");
@@ -39,13 +40,13 @@ void reinit(void)
     fputs("DONT DELETE IMPORTANT FILE", lock);
     fclose(lock);
 }
-static int exists(const char *fname)
+static bool exists(const char *fname)
 {
     FILE *file;
     if ((file = fopen(fname, "r")))
     {
         fclose(file);
-        return 1;
+        return true;
     }
-    return 0;
+    return false;
 }
