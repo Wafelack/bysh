@@ -2,7 +2,7 @@
 
 Project manager for the C programming language that can create projects, compile and buid them and create headers.
 
-![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wanager?label=Stars) ![GitHub](https://img.shields.io/github/license/Wafelack/wanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Debugging-%23ff0000) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wanager?label=Latest%20release)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Wafelack/wanager?label=Pull%20requests) ![GitHub issues](https://img.shields.io/github/issues/Wafelack/wanager?color=%23ff5522&label=Issues) ![GitHub top language](https://img.shields.io/github/languages/top/Wafelack/wanager?color=%23aaaaaa&label=C) ![GitHub stars](https://img.shields.io/github/stars/Wafelack/wanager?label=Stars) ![GitHub](https://img.shields.io/github/license/Wafelack/wanager?color=%2300afff&label=License) ![Status](https://img.shields.io/badge/Status-Working_For_Windows-%2300ff00) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Wafelack/wanager?label=Latest%20release)
 
 ## How to use
 
