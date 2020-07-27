@@ -13,11 +13,6 @@ void header(char *name)
     char *full = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 3));
     char *NAME = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 3));
     char *wext = malloc((strlen(name) * sizeof(char)) + (sizeof(char) * 2));
-    for (unsigned int i = 0; i < strlen(name); i++)
-    {
-        NAME[i] = toupper(name[i]);
-        printf("[%c]", NAME[i]);
-    }
 
     sprintf(full, "_%s_H_", NAME);
     sprintf(wext, "%s.h", name);
