@@ -55,5 +55,3 @@ $ cat foo.h
 
 #endif /*_FOO_H*/
 ```
-
-test for discord
