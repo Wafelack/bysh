@@ -1,27 +1,28 @@
+PROJECT=wanager
+SOURCES= $(wildcard */*.c)
+OBJECTS=$(SOURCES:.c=.o)
+
 CC = gcc
-CFLAGS = -W -Wall -Werror -Wextra
-OBJ = bin/main.o bin/version.o bin/new.o bin/build.o bin/run.o bin/reinit.o bin/header.o
+LDFLAGS = -lm
+CFLAGS = -g \
+		 -MD \
+		 -Wall \
+		 -Wextra  \
+		 -Werror \
+		 -fsanitize=address \
+		 -fsanitize=undefined
 
-bin : $(OBJ)
-	gcc $(OBJ) -o wanager
+$(PROJECT).out: $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
-bin/main.o : src/main.c
-	$(CC) -o bin/main.o -c src/main.c $(CFLAGS)
+.PHONY: all clean test
 
-bin/version.o : core/version.c
-	$(CC) -o bin/version.o -c core/version.c $(CFLAGS)
+all: $(PROJECT).out
 
-bin/new.o : core/new.c
-	$(CC) -o bin/new.o -c core/new.c $(CFLAGS)
+clean:
+	rm -f $(OBJECTS) $(SOURCES:.c=.d) $(PROJECT).out
 
-bin/build.o : core/build.c
-	$(CC) -o bin/build.o -c core/build.c $(CFLAGS)
+test: $(PROJECT).out
+	./$(PROJECT).out
 
-bin/run.o : core/run.c
-	$(CC) -o bin/run.o -c core/run.c $(CFLAGS)
-
-bin/reinit.o : core/reinit.c
-	$(CC) -o bin/reinit.o -c core/reinit.c $(CFLAGS)
-
-bin/header.o : core/header.c
-	$(CC) -o bin/header.o -c core/header.c $(CFLAGS)
+-include $(SOURCES:.c=.d)
