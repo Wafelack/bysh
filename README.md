@@ -41,7 +41,7 @@
     </thead>
     <tbody>
     <tr>
-    <th align="center">
+    <th align="center" widtg="100">
     C Version
 </th>
     <td align="center">
