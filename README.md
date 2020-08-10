@@ -59,10 +59,10 @@
     Rust Version
     </th>
     <td align="center">
-        <img src="https://img.shields.io/badge/Status-Windows-%2300ff00">
+        <img src="https://img.shields.io/badge/Status-Should_Work-%23aaff00">
     </td>
     <td align="center">
-        <img src="https://img.shields.io/badge/Status-Should_Work-%23aaff00">
+        <img src="https://img.shields.io/badge/Status-Working-%2300ff00">
     </td>
     <td align="center">
         <img src="https://img.shields.io/badge/Status-Should_Work-%23aaff00">
@@ -72,7 +72,7 @@
 
 </table>
 
-## If you can test this on Linux & MacOS, please open an issue to tell me what is about it ;)
+### If you can test this on Linux & MacOS, please open an issue to tell me what is about it ;)
 
 <br>
 <br>

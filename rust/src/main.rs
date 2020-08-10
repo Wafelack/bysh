@@ -30,7 +30,7 @@ impl Version {
 
 fn main() {
     let ver = Version {
-        os: String::from("Windows"),
+        os: String::from("Linux"),
         main: 1,
         discriminator: 0,
         third: 1,
