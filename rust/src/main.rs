@@ -9,19 +9,30 @@ mod create;
 mod header;
 mod reinit;
 mod run;
-mod version;
 
 use build::{build, buildhard};
 use create::create;
 use header::header;
 use reinit::reinit;
 use run::run;
-use version::{version, Version};
+
+struct Version {
+    os: String,
+    main: u8,
+    discriminator: u8,
+    third: u8,
+}
+impl Version {
+    fn display(&self) {
+        println!("Wanager by Wafelack <contactme.wafelack@protonmail.ch>, Licensed under GPL-v3.0, Version {} - {}.{}.{}", self.os, self.main, self.discriminator, self.third);
+    }
+}
 
 fn main() {
     let ver = Version {
-        main: 0,
-        discriminator: 6,
+        os: String::from("Windows"),
+        main: 1,
+        discriminator: 0,
         third: 1,
     };
     let argv: Vec<String> = env::args().collect();
@@ -29,8 +40,8 @@ fn main() {
     if argc < 2 {
         println!("Usage: wanager <command> [OPTIONS]");
         std::process::exit(1);
-    } else if argv[1] == "version" {
-        version(ver);
+    } else if argv[1] == "--version" {
+        ver.display();
     } else if argv[1] == "new" && argc == 3 {
         let ret = create(&argv[2]);
         match ret {
