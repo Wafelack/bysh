@@ -1,3 +1,3 @@
-*.h linguist-language=Makefile
+*.h linguist-language=makefile
 *.c linguist-language=C
 *.toml linguist-language=Rust
