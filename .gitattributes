@@ -1,2 +1,3 @@
 *.h linguist-language=Cpp
+*.c linguist-language=Cpp
 *.toml linguist-language=Rust
