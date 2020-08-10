@@ -1,6 +1,10 @@
 use std::fs;
 use std::fs::File;
 use std::io::Write;
+use std::process::Command;
+
+use std::env;
+use std::path::Path;
 
 fn mkdir(name: &str, errmess: &str, number: u8) {
     match fs::create_dir(name) {
@@ -44,8 +48,26 @@ pub fn create(name: &str) -> std::io::Result<()> {
     let mut lock: String = name.clone().into();
     lock.push_str("\\lock.wmg");
 
+    let mut gitignore: String = name.clone().into();
+    gitignore.push_str("\\.gitignore");
+
     let mut locker = File::create(lock)?;
     locker.write_all(b"DON'T DELETE IMPORTANT FILE")?;
+
+    let mut locker = File::create(gitignore)?;
+    locker.write_all(b"build/")?;
+
+    let project = Path::new(name);
+    match env::set_current_dir(&project) {
+        Ok(_) => (),
+        Err(_e) => println!("Failed to change directory"),
+    }
+
+    Command::new("git")
+        .arg("init")
+        .status()
+        .expect("Failed to create git repository");
+    println!("Created new project in {}", name);
 
     Ok(())
 }
