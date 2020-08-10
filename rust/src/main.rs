@@ -6,12 +6,14 @@ use std::process::exit;
 
 mod build;
 mod create;
+mod header;
 mod reinit;
 mod run;
 mod version;
 
 use build::{build, buildhard};
 use create::create;
+use header::header;
 use reinit::reinit;
 use run::run;
 use version::{version, Version};
@@ -19,8 +21,8 @@ use version::{version, Version};
 fn main() {
     let ver = Version {
         main: 0,
-        discriminator: 1,
-        third: 0,
+        discriminator: 6,
+        third: 1,
     };
     let argv: Vec<String> = env::args().collect();
     let argc = argv.len();
@@ -72,6 +74,11 @@ fn main() {
             } else {
                 println!("Reinitialisation aborted");
             }
+        }
+    } else if argv[1] == "header" && argc == 3 {
+        match header(&argv[2]) {
+            Ok(_) => (),
+            Err(e) => println!("{}", e),
         }
     } else {
         println!("Usage: wanager <command> [OPTIONS]");
