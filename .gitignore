@@ -4,3 +4,4 @@
 tests/
 rust/target/
 rust/Cargo.lock
+release/
