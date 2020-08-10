@@ -62,10 +62,10 @@
         <img src="https://img.shields.io/badge/Status-Windows-%2300ff00">
     </td>
     <td align="center">
-        <img src="https://img.shields.io/badge/Status-Should_Work-%2355ff00">
+        <img src="https://img.shields.io/badge/Status-Should_Work-%23aaff00">
     </td>
     <td align="center">
-        <img src="https://img.shields.io/badge/Status-Should_Work-%2355ff00">
+        <img src="https://img.shields.io/badge/Status-Should_Work-%23aaff00">
     </td>
     </tr>
     </tbody>
