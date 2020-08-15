@@ -48,7 +48,7 @@
         <img src="https://img.shields.io/badge/Status-Not_Working-%23ff0000" align="center">
     </td>
     <td align="center">
-        <img src="https://img.shields.io/badge/Status-Working-%2300ff00">
+        <img src="https://img.shields.io/badge/Status-Working_but_not_fine_i_advise_you_to_use_Rust_version_instead-%2300ff00">
     </td>
     <td align="center">
         <img src="https://img.shields.io/badge/Status-Not_Working-%23ff0000">
