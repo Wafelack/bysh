@@ -27,6 +27,8 @@ pub fn create(name: &str) -> std::io::Result<()> {
 
     let mut debug: String = build.clone();
     debug.push_str("\\debug");
+    let mut deps: String = build.clone();
+    deps.push_str("\\deps");
 
     let mut main: String = src.clone();
     main.push_str("\\main.c");
@@ -36,6 +38,7 @@ pub fn create(name: &str) -> std::io::Result<()> {
     mkdir(&build, errmess, 3);
     mkdir(&release, errmess, 4);
     mkdir(&debug, errmess, 5);
+    mkdir(&deps, errmess, 6);
 
     let mut mf = File::create(main)?;
     mf.write_all(b"#include <stdio.h>\n")?;

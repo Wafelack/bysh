@@ -7,12 +7,14 @@ use std::process::exit;
 mod build;
 mod create;
 mod header;
+mod install;
 mod reinit;
 mod run;
 
 use build::{build, buildhard};
 use create::create;
 use header::header;
+use install::install;
 use reinit::reinit;
 use run::run;
 
@@ -88,6 +90,11 @@ fn main() {
         }
     } else if argv[1] == "header" && argc == 3 {
         match header(&argv[2]) {
+            Ok(_) => (),
+            Err(e) => println!("{}", e),
+        }
+    } else if argv[1] == "install" && argc == 3 {
+        match install(&argv[2]) {
             Ok(_) => (),
             Err(e) => println!("{}", e),
         }
