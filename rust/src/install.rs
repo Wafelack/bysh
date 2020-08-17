@@ -1,7 +1,8 @@
 mod wanager;
-use std::io::{Error, ErrorKind, Write};
+use std::io::{Error, ErrorKind};
 use wanager::Wanager;
 use std::path::Path;
+use std::fs;
 
 #[allow(unused_variables)]
 pub fn install(lib: &str) -> std::io::Result<()> {

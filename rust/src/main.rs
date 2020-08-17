@@ -51,6 +51,9 @@ fn main() {
             Err(_e) => println!("An error occured. Please retry later"),
         }
     } else if argv[1] == "build" {
+        if !Path::new("lock.wmg").exists() {
+            std::process::exit(-1);
+        }
         if argc == 3 && argv[2] == "--release" {
             build();
         } else {
