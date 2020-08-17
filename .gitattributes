@@ -1,3 +1,4 @@
 *.h linguist-language=C
 *.c linguist-language=C
 *.toml linguist-language=Rust
+*.json linguist-language=Javascript
