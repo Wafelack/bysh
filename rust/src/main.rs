@@ -10,6 +10,7 @@ mod header;
 mod install;
 mod reinit;
 mod run;
+mod  query;
 
 use build::{build, buildhard};
 use create::create;
@@ -17,6 +18,7 @@ use header::header;
 use install::install;
 use reinit::reinit;
 use run::run;
+use query::query;
 
 struct Version {
     os: String,
@@ -101,7 +103,9 @@ fn main() {
             Ok(_) => (),
             Err(e) => println!("{}", e),
         }
-    } else {
+    } else if argv[1] == "query" && argc == 3 {
+        query(&argv[2]);
+    }else {
         println!("Usage: wanager <command> [OPTIONS]");
         std::process::exit(1);
     }

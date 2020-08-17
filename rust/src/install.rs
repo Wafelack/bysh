@@ -16,7 +16,7 @@ pub fn install(lib: &str) -> std::io::Result<()> {
     }
     match w.install(lib, links) {
         Ok(_) => (),
-        Err(e) => println!("La bibliothèque {} est déjà installée !", lib),
+        Err(e) => println!("Library {} is already installed !", lib),
         }
     fs::write("deps.dat", lib.as_bytes())?;
 
