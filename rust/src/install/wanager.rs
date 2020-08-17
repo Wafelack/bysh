@@ -28,12 +28,16 @@ impl Wanager {
     }
     pub fn install(&self, lib_name:&str,  link: (String, String)) -> std::io::Result<()> {
         let full_dir: String = format!("src\\{}", lib_name);
-        match std::fs::create_dir(full_dir) {
+        match std::fs::create_dir(&full_dir) {
             Ok(_) => (),
             Err(e) => return Err(e),
         };
-        Command::new("curl").arg(link.0).status().unwrap();
-        Command::new("curl").arg(link.1).status().unwrap();
+
+        let full_head: String = format!("{}/{}.h", &full_dir, lib_name);
+        let full_file: String = format!("{}/{}.c", &full_dir, lib_name);
+
+        Command::new("curl").arg(link.0).arg("-o").arg(full_head).status().unwrap();
+        Command::new("curl").arg(link.1).arg("-o").arg(full_file).status().unwrap();
         Ok(())
     }
 }

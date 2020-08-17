@@ -32,13 +32,16 @@ pub fn create(name: &str) -> std::io::Result<()> {
 
     let mut main: String = src.clone();
     main.push_str("\\main.c");
+    let mut deps: String = name.clone().into();
+    deps.push_str("\\deps.dat");
 
     mkdir(name, errmess, 1);
     mkdir(&src, errmess, 2);
     mkdir(&build, errmess, 3);
     mkdir(&release, errmess, 4);
     mkdir(&debug, errmess, 5);
-    mkdir(&deps, errmess, 6);
+
+
 
     let mut mf = File::create(main)?;
     mf.write_all(b"#include <stdio.h>\n")?;
@@ -47,6 +50,7 @@ pub fn create(name: &str) -> std::io::Result<()> {
     mf.write_all(b"    puts(\"Hello, World !\");\n")?;
     mf.write_all(b"    return EXIT_SUCCESS;\n")?;
     mf.write_all(b"}")?;
+    let _mf = File::create(deps)?;
 
     let mut lock: String = name.clone().into();
     lock.push_str("\\lock.wmg");
