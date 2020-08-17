@@ -1,8 +1,7 @@
 mod wanager;
-use std::io::{Error, ErrorKind};
+use std::io::{Error, ErrorKind, Write};
 use wanager::Wanager;
 use std::path::Path;
-use std::fs::File;
 
 #[allow(unused_variables)]
 pub fn install(lib: &str) -> std::io::Result<()> {
@@ -18,6 +17,8 @@ pub fn install(lib: &str) -> std::io::Result<()> {
         Ok(_) => (),
         Err(e) => println!("La bibliothèque {} est déjà installée !", lib),
         }
+    fs::write("deps.dat", lib.as_bytes())?;
+
 
     Ok(())
 }
