@@ -1,13 +1,10 @@
-/*
-WANAGER API
-*/
 use std::process::Command;
 use std::str;
 
 pub struct Wanager;
 
 impl Wanager {
-    pub fn exists(self, lib_name: &str) -> bool {
+    pub fn exists(&self, lib_name: &str) -> bool {
         let output = Command::new("curl")
             .arg("https://wafelack.alwaysdata.net/libs.txt")
             .output()
@@ -24,9 +21,19 @@ impl Wanager {
         }
         false
     }
-    pub fn get_link(self, lib_name: &str) -> (&str, &str) {
-        let header: &str = format!("https://wafelack.alwaysdata.net/{}.h", lib_name);
-        let file: &str = format!("https://wafelack.alwaysdata.net/{}.c", lib_name);
+    pub fn get_link(&self, lib_name: &str) -> (String, String) {
+        let header: String = format!("https://wafelack.alwaysdata.net/{}.h", lib_name);
+        let file: String = format!("https://wafelack.alwaysdata.net/{}.c", lib_name);
         (header, file)
+    }
+    pub fn install(&self, lib_name:&str,  link: (String, String)) -> std::io::Result<()> {
+        let full_dir: String = format!("src\\{}", lib_name);
+        match std::fs::create_dir(full_dir) {
+            Ok(_) => (),
+            Err(e) => return Err(e),
+        };
+        Command::new("curl").arg(link.0).status().unwrap();
+        Command::new("curl").arg(link.1).status().unwrap();
+        Ok(())
     }
 }
