@@ -150,3 +150,15 @@ $ wanager install <lib_name>
 ```
 
 <i>Note: To verify if a library exists, run</i> `wanager query <lib_name>`
+
+## Publish your library
+
+To publish a library send me a mail to `contactme.wafelack@protonmail.ch`.
+
+The mail has to contain :
+
+Name of the library
+Description
+Why it should be published
+
+WARNING : Library has to be **a single .c file** with **a single .h file**, send them linked to the mail.
