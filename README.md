@@ -141,3 +141,12 @@ $ cat foo.h
 
 #endif /*_FOO_H*/
 ```
+
+### To install a library
+
+```
+$ cd yourproject/
+$ wanager install <lib_name>
+```
+
+<i>Note: To verify if a library exists, run</i> `wanager query <lib_name>`
