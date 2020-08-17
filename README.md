@@ -157,8 +157,10 @@ To publish a library send me a mail to `contactme.wafelack@protonmail.ch`.
 
 The mail has to contain :
 
-Name of the library
-Description
-Why it should be published
+- The library's name
+- The library's description
+- Why it should be published
+
+<br>
 
 WARNING : Library has to be **a single .c file** with **a single .h file**, send them linked to the mail.
