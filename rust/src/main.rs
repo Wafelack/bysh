@@ -34,10 +34,10 @@ impl Version {
 
 fn main() {
     let ver = Version {
-        os: String::from("Linux"),
-        main: 1,
-        discriminator: 0,
-        third: 1,
+        os: String::from("Windows"),
+        main: 2,
+        discriminator: 9,
+        third: 2,
     };
     let argv: Vec<String> = env::args().collect();
     let argc = argv.len();
