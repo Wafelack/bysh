@@ -3,16 +3,16 @@ use std::io::{Error, ErrorKind};
 use std::path::Path;
 use std::process::Command;
 
-pub fn run() -> std::io::Result<()> {
+pub fn run(args: Vec<&str>) -> std::io::Result<()> {
     let debug = ".\\build\\debug\\debug.exe";
     let release = ".\\build\\release\\release.exe";
 
     if Path::new(debug).exists() && !Path::new(release).exists() {
-        Command::new(debug).status().expect("Cannot run binary");
+        Command::new(debug).args(args).status().expect("Cannot run binary");
         fs::remove_file(debug)?;
         Ok(())
     } else if Path::new(release).exists() && !Path::new(debug).exists() {
-        Command::new(release).status().expect("Cannot read binary");
+        Command::new(release).args(args).status().expect("Cannot read binary");
         fs::remove_file(release)?;
         Ok(())
     } else {

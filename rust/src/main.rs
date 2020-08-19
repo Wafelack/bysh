@@ -62,7 +62,11 @@ fn main() {
             buildhard();
         }
     } else if argv[1] == "run" {
-        let ret = run();
+        let mut args: Vec<&str> = Vec::new();
+        for i in 2..argc {
+            args.push(&argv[i]);
+        }
+        let ret = run(args);
         match ret {
             Ok(_) => (),
             Err(e) => println!("{}", e),

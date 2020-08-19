@@ -112,7 +112,7 @@ In `src/`, you'll find file `main.c` that contains a basic hello world program.
 ```
 $ wanager build
 
-$ wanager run
+$ wanager run <args>
 Hello World
 ```
 
