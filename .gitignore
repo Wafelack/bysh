@@ -1,8 +1,0 @@
-*.exe
-*.o
-*.d
-tests/
-rust/target/
-rust/Cargo.lock
-release/
-.idea/
