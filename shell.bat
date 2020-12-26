@@ -4,6 +4,6 @@ set starting_dir="C:\Users\%username%"
 cd %starting_dir%
 cls
 :loop
-set /p cmd="%username% %% "
+set /p cmd="%CD% %% "
 %cmd%
 goto :loop
