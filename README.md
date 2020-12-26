@@ -8,4 +8,4 @@ It exploits a windows breach that launches batch files as the current user (even
 
 ## Disclaimer
 
-This program is made only for **educational purposes**. The use of any of these programs on an infrastructure **without prior mutual consent can be considered an illegal** activity, and is highly discouraged by its authors/developers. It is the end user's responsibility to obey all applicable local, state and federal laws. Authors and developers assume no liability and are not responsible for any misuse or damage caused by this program.
+This program is made only for **educational purposes**. The use of any of these programs on an infrastructure **without prior mutual consent can be considered an illegal activity**, and is highly discouraged by its authors/developers. It is the end user's responsibility to obey all applicable local, state and federal laws. Authors and developers assume no liability and are not responsible for any misuse or damage caused by this program.
