@@ -1,4 +1,4 @@
-# CmdBypass
+# bysh
 
 This is a way to obtain a shell on windows even if there are restrictions for normal users that are looking like that:
 
